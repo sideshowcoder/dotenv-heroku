@@ -1,0 +1,1 @@
+require "dotenv-heroku/version"

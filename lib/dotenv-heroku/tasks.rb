@@ -1,8 +1,6 @@
-require "dotenv/heroku/version"
 require "mkmf"
 
 namespace :config do
-
   task :executable do
     fail "missing heroku executable from the PATH" unless find_executable "heroku"
   end
