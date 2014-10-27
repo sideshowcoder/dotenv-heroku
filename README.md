@@ -1,6 +1,8 @@
-# Dotenv::Heroku
+# Dotenv Heroku
 
-TODO: Write a gem description
+Support for config push and pull via Rake tasks for
+[dotenv](https://github.com/bkeepers/dotenv). The rake tasks rely on the
+`heroku` excutable to be present in the PATH.
 
 ## Installation
 
@@ -18,7 +20,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add
+
+    require "dotenv-heroku/tasks"
+
+to your Rakefile.
+
+You can now run
+
+    $ rake config:pull
+
+to pull the current heroku config to the local .env file, you can also pass the
+desired file as an argument
+
+    $ rake config:pull\[my_current_config\]
+
+You can also push the config to heroku via
+
+    $ rake config:push
+
+to push the config from the .env file, or
+
+    $ rake config:push\[my_current_config\]
+
+to push the config from the my_current_config file
 
 ## Contributing
 
